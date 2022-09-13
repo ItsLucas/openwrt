@@ -1206,16 +1206,6 @@ define Device/zyxel_keenetic
 endef
 TARGET_DEVICES += zyxel_keenetic
 
-define Device/zyxel_keenetic-4g-b
-  $(Device/uimage-lzma-loader)
-  SOC := rt5350
-  IMAGE_SIZE := 7872k
-  DEVICE_VENDOR := ZyXEL
-  DEVICE_MODEL := Keenetic 4G
-  DEVICE_VARIANT := B
-endef
-TARGET_DEVICES += zyxel_keenetic-4g-b
-
 define Device/zyxel_keenetic-lite-b
   $(Device/uimage-lzma-loader)
   SOC := rt5350
@@ -1247,7 +1237,6 @@ endef
 TARGET_DEVICES += zyxel_nbg-419n
 
 define Device/zyxel_nbg-419n-v2
-  $(Device/uimage-lzma-loader)
   SOC := rt3352
   IMAGE_SIZE := 7872k
   DEVICE_VENDOR := ZyXEL
