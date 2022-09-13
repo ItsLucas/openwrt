@@ -44,6 +44,11 @@ jobs:
 
           df -h
 
+      - name: Add passwall
+        run: |
+          echo "src-git PWpackages https://github.com/xiaorouji/openwrt-passwall.git;packages" >> feeds.conf.default
+          echo "src-git PWluci https://github.com/xiaorouji/openwrt-passwall.git;luci" >> feeds.conf.default
+
       - name: Update feeds
         run: |
           ./scripts/feeds update -a
